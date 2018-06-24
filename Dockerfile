@@ -11,4 +11,4 @@ RUN addgroup tomcatusers && adduser -D tomcat && adduser tomcat tomcatusers
 RUN chown -R tomcat:tomcatusers .
 USER tomcat
 
-COPY --from=BUILD /usr/src/myapp/target/*.war /usr/local/tomcat/webapps/helloworld.war
+COPY --from=builder /usr/src/myapp/target/*.war /usr/local/tomcat/webapps/helloworld.war
