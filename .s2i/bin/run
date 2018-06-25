@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "*** DUMP run ***"
+cat /usr/libexec/s2i/run
+echo "*** DUMP run end ***"
+
+exec /usr/libexec/s2i/run

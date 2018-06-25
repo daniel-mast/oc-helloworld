@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "*** DUMP build ***"
+cat /usr/libexec/s2i/build
+echo "*** DUMP build end ***"
+
+exec /usr/libexec/s2i/build
