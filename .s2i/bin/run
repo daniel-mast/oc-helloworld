@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ -f "/usr/libexec/s2i/run" ]
+if [ -f "/usr/local/s2i/run" ]
 then
 	echo "*** DUMP run ***"
-	cat /usr/libexec/s2i/run
+	cat /usr/local/s2i/run
 	echo "*** DUMP run end ***"
 
-	exec /usr/libexec/s2i/run
+	exec /usr/local/s2i/run
 fi

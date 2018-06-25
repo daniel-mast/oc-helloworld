@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ -f "/usr/libexec/s2i/build" ]
+if [ -f "/usr/local/s2i/build" ]
 then
 	echo "*** DUMP build ***"
-	cat /usr/libexec/s2i/build
+	cat /usr/local/s2i/build
 	echo "*** DUMP build end ***"
 
-	exec /usr/libexec/s2i/build
+	exec /usr/local/s2i/build
 fi
