@@ -6,5 +6,10 @@ then
 	cat /usr/local/s2i/assemble
 	echo "*** DUMP assemble end ***"
 
-	exec /usr/local/s2i/assemble
+	echo "*** RUN assemble ***"
+	/usr/local/s2i/assemble
+	rc=$?
+	echo "*** RUN assemble end ***"
+
+	exit $rc
 fi
