@@ -1,7 +1,10 @@
 #!/bin/sh
 
-echo "*** DUMP assemble ***"
-cat /usr/libexec/s2i/assemble
-echo "*** DUMP assemble end ***"
+if [ -f "/usr/libexec/s2i/assemble" ]
+then
+	echo "*** DUMP assemble ***"
+	cat /usr/libexec/s2i/assemble
+	echo "*** DUMP assemble end ***"
 
-exec /usr/libexec/s2i/assemble
+	exec /usr/libexec/s2i/assemble
+fi

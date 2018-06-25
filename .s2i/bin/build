@@ -1,7 +1,10 @@
 #!/bin/sh
 
-echo "*** DUMP build ***"
-cat /usr/libexec/s2i/build
-echo "*** DUMP build end ***"
+if [ -f "/usr/libexec/s2i/build" ]
+then
+	echo "*** DUMP build ***"
+	cat /usr/libexec/s2i/build
+	echo "*** DUMP build end ***"
 
-exec /usr/libexec/s2i/build
+	exec /usr/libexec/s2i/build
+fi

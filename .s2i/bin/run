@@ -1,7 +1,10 @@
 #!/bin/sh
 
-echo "*** DUMP run ***"
-cat /usr/libexec/s2i/run
-echo "*** DUMP run end ***"
+if [ -f "/usr/libexec/s2i/run" ]
+then
+	echo "*** DUMP run ***"
+	cat /usr/libexec/s2i/run
+	echo "*** DUMP run end ***"
 
-exec /usr/libexec/s2i/run
+	exec /usr/libexec/s2i/run
+fi

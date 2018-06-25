@@ -1,7 +1,10 @@
 #!/bin/sh
 
-echo "*** DUMP save-artifacts ***"
-cat /usr/libexec/s2i/save-artifacts
-echo "*** DUMP save-artifacts end ***"
+if [ -f "/usr/libexec/s2i/save-artifacts" ]
+then
+	echo "*** DUMP save-artifacts ***"
+	cat /usr/libexec/s2i/save-artifacts
+	echo "*** DUMP save-artifacts end ***"
 
-exec /usr/libexec/s2i/save-artifacts
+	exec /usr/libexec/s2i/save-artifacts
+fi
