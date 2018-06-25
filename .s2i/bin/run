@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "*** DUMP run ***"
 cat /usr/libexec/s2i/run
